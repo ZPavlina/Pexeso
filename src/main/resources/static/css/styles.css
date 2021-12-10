@@ -1,0 +1,63 @@
+/* box model */
+html { box-sizing: border-box; }
+*, *:after, *:before { box-sizing: border-box;}
+
+body {
+    padding: 10px 50px;
+    background: bisque url('../images/pozadi.jpg') center center no-repeat;
+    background-size: cover;
+    color: black;
+    font-family: sans-serif;
+    font-size: large;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 50px 0;
+    font-family: sans-serif;
+    text-align: center;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    margin: 50px 0;
+    font-family: sans-serif;
+    text-align: center;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.zprava {
+    text-align: center;
+}
+
+.pexeso {
+    width: 360px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-gap: 20px;
+}
+
+.pexeso .karta {
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+    display: block;
+}
+
+.pexeso .bez-karty {
+    border: none;
+    box-shadow: none;
+}
+
+.pexeso .karta:nth-child(6n+1) { transform: rotate(-2deg); }
+.pexeso .karta:nth-child(6n+2) { transform: rotate(3deg); }
+.pexeso .karta:nth-child(6n+3) { transform: rotate(-4deg); }
+.pexeso .karta:nth-child(6n+4) { transform: rotate(2deg); }
+.pexeso .karta:nth-child(6n+5) { transform: rotate(1deg); }
+.pexeso .karta:nth-child(6n+6) { transform: rotate(-4deg); }
+
+.neviditelne {
+    display: none;
+}
